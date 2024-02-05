@@ -1,8 +1,9 @@
 import React from 'react'
-import {Button, Container, Navbar, Modal} from 'react-bootstrap'
+import {Button, Navbar, Modal} from 'react-bootstrap'
 import {useState} from 'react'
 
-export default function NavbarComponent() {
+
+function NavbarComponent() {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
@@ -17,7 +18,7 @@ export default function NavbarComponent() {
       </Navbar.Collapse>
     </Navbar>
      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+     <Modal.Header closeButton>
           <Modal.Title>Shopping Cart</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -27,3 +28,5 @@ export default function NavbarComponent() {
     </>
   )
 }
+
+export default NavbarComponent;
